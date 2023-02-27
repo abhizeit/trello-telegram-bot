@@ -3,6 +3,7 @@
 <h1> Type Hello to get start with the <a href="https://web.telegram.org/z/#6200584357" target="_blank">bot</a></h1>
  Some commands for interacting with Trello Dasbord</h2>
       <h2> show my boards - get all you boards with their ids</h2>
+     <img src="https://user-images.githubusercontent.com/81003403/221527049-959ab304-87d4-479f-afb4-80cb0032e300.png"/>
       <h2> create board {name} - to create a new board</h2>
       <img src="https://user-images.githubusercontent.com/81003403/221521556-f35666d2-148e-4b53-a6b5-ec37abd4b000.png"/>
        <h2>  delete board {boardId} - to delete a board</h2>
