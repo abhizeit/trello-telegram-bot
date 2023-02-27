@@ -25,8 +25,9 @@ bot.on("message", async (msg) => {
        create board {name} - to create a new board
        delete board {boardId} - to delete a board
        show lists {boardId} - to get all the lists and their Ids of a board
-       create list {name} {boardId} - to create a list in a board
+       create list {name} in {boardId} - to create a list in a board
        show list cards {listId} - get cards and their Ids in a list of a board
+       create card {name} in {listId} - add cards to the list of board
        delete card {cardId}- to delete a list card
     `
     );
@@ -38,12 +39,14 @@ bot.on("message", async (msg) => {
       const { data } = await axios.get(
         `${baseUrl}/members/me/boards?fields=name,url&key=${apiKey}&token=${apiToken}`
       );
+      console.log(data);
       let msg_str = "";
       for (let m of data) {
         msg_str += m.name + " " + m.id + " " + m.url + "\n";
       }
       bot.sendMessage(chatId, msg_str);
     } catch (e) {
+      console.log(e.message);
       bot.sendMessage(
         chatId,
         `I had difficulty getting your boards. I'm working on it.`
